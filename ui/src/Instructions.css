@@ -1,0 +1,34 @@
+.Instructions {
+  display: flex;
+  align-items: stretch;
+  font-family: Poppins, sans-serif;
+  margin-right: 1rem;
+  max-width: 30em;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+li {
+  padding-bottom: 1rem;
+}
+
+button {
+  height: 60em;
+}
+.subHeader {
+  font-size: 16px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  padding: 1rem;
+}

@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "{ cd server && npm start; } { cd ui && BROWSER=none WDS_SOCKET_PORT=0 vite --port 8080; }"
+  },
+  "dependencies": {
+    "server": "^1.0.38",
+    "ui": "^0.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

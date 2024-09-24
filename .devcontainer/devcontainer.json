@@ -1,0 +1,34 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "hostRequirements": {
+    "cpus": 4
+  },
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": {
+    "wrapper": "npm install",
+    "ui": "cd ui && npm install",
+    "server": "cd server && npm install"
+  },
+  "postCreateCommand": "/bin/bash ./.devcontainer/change_port_visibility.sh 3000 public",
+  "postStartCommand": {
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "server/index.js",
+        "ui/src/App.jsx"
+      ]
+    }
+  },
+  "portsAttributes": {
+    "8080": {
+      "label": "UI",
+      "onAutoForward": "openPreview"
+    },
+    "3000": {
+      "label": "Server",
+      "onAutoForward": "notify"
+    }
+  },
+  "forwardPorts": [8080, 3000]
+}
